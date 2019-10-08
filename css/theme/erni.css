@@ -16,7 +16,7 @@ body {
 
 .reveal {
   font-family: "Calibri Light", "Source Sans Pro", sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: normal;
   color: #414042; }
 
@@ -55,16 +55,16 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 1.8em; }
+  font-size: 2.5em; }
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 2.3em; }
 
 .reveal h3 {
-  font-size: 1.3em; }
+  font-size: 1.6em; }
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1.3em; }
 
 .reveal h1 {
   text-shadow: none; }
@@ -324,11 +324,12 @@ body {
   text-align: left;
   padding-top: 3em; }
   .reveal section h1 {
-    margin: 3em 0 0; }
+    margin: 0.5em 0 0; }
   .reveal section h3 {
     color: #033778;
     font-weight: bold;
-    font-family: 'Calibri'; }
+    font-family: 'Calibri';
+    margin-bottom: 0; }
   .reveal section ul {
     list-style-image: url("../../images/list-style-img.png");
     margin-left: 2em; }
@@ -337,6 +338,21 @@ body {
     .reveal section ul ul {
       list-style-image: none;
       list-style-type: square; }
+  .reveal section img {
+    max-height: 500px;
+    border: 0; }
+
+.col-2 {
+  width: 48%;
+  display: inline-block; }
+
+section.layout-left img {
+  float: left;
+  margin-right: 30px; }
+
+section.layout-right img {
+  float: right;
+  margin-left: 30px; }
 
 /* editor overwrites*/
 .cdx-simple-image__caption[contentEditable=true][data-placeholder]:empty::before {

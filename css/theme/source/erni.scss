@@ -29,7 +29,7 @@ $backgroundColor: #fff;
 $mainColor: $erniblack;
 $headingColor: $erniblack;
 
-$mainFontSize: 1em;
+$mainFontSize: 1.2em;
 $mainFont: 'Calibri Light', 'Source Sans Pro', sans-serif; //'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Calibri Light', 'Source Sans Pro', sans-serif; //'Source Sans Pro', Helvetica, sans-serif;
 $headingFontWeight: 'normal';
@@ -40,10 +40,10 @@ $linkColor: $erniblue;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 1.8em;
-$heading2Size: 1.6em;
-$heading3Size: 1.3em;
-$heading4Size: 1.0em;
+$heading1Size: 2.5em;
+$heading2Size: 2.3em;
+$heading3Size: 1.6em;
+$heading4Size: 1.3em;
 
 
 section.has-dark-background {
@@ -108,20 +108,27 @@ section.has-dark-background {
 
 .reveal section{
 	text-align: left; padding-top:3em;
-	h1{margin:3em 0 0;}
-	h3{color: $erniblue; font-weight:bold; font-family: 'Calibri';}
+	h1{margin:0.5em 0 0;}
+	h3{color: $erniblue; font-weight:bold; font-family: 'Calibri'; margin-bottom:0;}
 	ul{list-style-image: url('../../images/list-style-img.png'); margin-left:2em;
 		li{margin:1.5em 0;}
 		ul{list-style-image: none; list-style-type: square;}
 	}
+	
+	img{max-height:500px; border:0;}
 }
 
-.layout-left{
 
+.col-2{
+	width:48%; display:inline-block;
 }
 
-.layout-right{
+section.layout-left{
+	img{float:left; margin-right:30px;}
+}
 
+section.layout-right{
+	img{float:right; margin-left:30px;}
 }
 
 
