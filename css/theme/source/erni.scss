@@ -16,26 +16,35 @@
 
 
 // Override theme settings (see ../template/settings.scss)
+$ernidarkgray: #515455;
+$erniblue: #033778;
+$ernired: #ed1b34;
+$ernigray: #b1b0b1;
+$erniblack: #414042;
+$white: #ffffff;
+
+
 $backgroundColor: #fff;
 
-$mainColor: #222;
-$headingColor: #222;
+$mainColor: $erniblack;
+$headingColor: $erniblack;
 
-$mainFontSize: 42px;
-$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFontSize: 1em;
+$mainFont: 'Calibri Light', 'Source Sans Pro', sans-serif; //'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Calibri Light', 'Source Sans Pro', sans-serif; //'Source Sans Pro', Helvetica, sans-serif;
+$headingFontWeight: 'normal';
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
-$headingFontWeight: 600;
-$linkColor: #2a76dd;
+$headingTextTransform: normal;
+$linkColor: $erniblue;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
 
-$heading1Size: 2.5em;
+$heading1Size: 1.8em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
+
 
 section.has-dark-background {
 	&, h1, h2, h3, h4, h5, h6 {
@@ -47,3 +56,74 @@ section.has-dark-background {
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+
+
+*{box-sizing:border-box;}
+
+.toolbar{
+	width: 300px;
+	height:100vh;
+	left:-300px;
+	position: fixed;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	flex-wrap: wrap;
+	z-index: 5;
+	transition:400ms ease;
+	box-shadow: 0 0 3px #ccc;
+	padding:15px;
+	background:$erniblue;
+	color:$white;
+	&.open{
+		left:0;
+	}
+	#menu{
+		position: absolute; right:-25px; top:10px; cursor: pointer; color:#000;
+	}
+	*{margin:4px 0;}
+}
+
+.present{
+	top:auto !important;
+}
+
+.btn{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+    display: block;
+    font-weight: 700;
+	font-family: 'Source Sans Pro', sans-serif;
+	background:transparent;
+	text-transform: capitalize;
+	cursor:pointer;
+	&:hover, &:focus{
+		background:$white;
+		color:$erniblue;
+	}
+}
+
+.reveal section{
+	text-align: left; padding-top:3em;
+	h1{margin:3em 0 0;}
+	h3{color: $erniblue; font-weight:bold; font-family: 'Calibri';}
+	ul{list-style-image: url('../../images/list-style-img.png'); margin-left:2em;
+		li{margin:1.5em 0;}
+		ul{list-style-image: none; list-style-type: square;}
+	}
+}
+
+.layout-left{
+
+}
+
+.layout-right{
+
+}
+
+
+/* editor overwrites*/
+.cdx-simple-image__caption[contentEditable=true][data-placeholder]:empty::before{left: 10px;}

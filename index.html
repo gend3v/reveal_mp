@@ -6,9 +6,10 @@
 
 		<title>reveal.js</title>
 
+		<link rel="stylesheet" href="lib/font/fontawesome-free-5.11.2-web/css/all.min.css">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/erni.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -23,27 +24,225 @@
 		</script>
 	</head>
 	<body>
+
+		<!-- <button id="workMode" class="btn btn-default"><i class="fas fa-code"></i> Work Mode</button> -->
+
+		<div class="toolbar">
+			<a id="menu"><i class="fas fa-bars"></i></a>
+
+			<button id="addSlide" class="btn btn-primary"><i class="fas fa-plus"></i> add slide</button>
+			<button id="addChild" class="btn btn-primary"><i class="fas fa-plus"></i> add child</button>
+			<button id="removeSlide" class="btn btn-danger"><i class="fas fa-trash"></i> remove slide</button>
+			<div id="output"></div>
+			<hr/>
+			<h4>Change Style</h4>
+			<select id="changeLayout" class="form-control">
+				<option value="left">left</option>
+				<option value="right">right</option>
+				<option value="center">center</option>
+			</select>
+			<!-- <button id="editSlide" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> edit slide</button>
+			<button id="saveButton" class="btn btn-primary"><i class="fas fa-save"></i> save slide</button> -->
+		</div>
+
+
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+					<section data-background-image="images/bg.png">
+					</section>
+	
+					<section>
+						<h1>Contents</h1>
+						<section>
+							<h3>Overview</h3>
+							<ul>
+								<li>Goal</li>
+								<li>Pros</li>
+								<li>Scope</li>
+								<li>Expected Result</li>
+								<li>Limitations</li>
+								<li>Timeline</li>
+							</ul>
+						</section>
+	
+						<section>
+							<h3>Value</h3>
+							<ul>
+								<li>For Developers</li>
+								<li>For ERNI</li>
+								<li>For Client</li>
+							</ul>
+						</section>
+	
+						<section>
+							<h3>Links and References</h3>
+						</section>
+					</section>
+					
+					<section>
+						<h1>What is Reveal.js?</h1>
+						<p class="fragment" data-fragment-index="1">A presentation framework that utilizes HTML5, CSS and JavaScript to render portions of a webpage as individual slides.</p>
+						<aside class="notes">
+								<p>Will my slides file be recognized by the shared computer at the venue?</p>
+										<p>How to share slides with all audiences using different OS?</p>
+												<p>Will my slides be accessible to all individuals?</p>
+														<p>Most important one, how to make my slides interesting & engaging and not just another boring presentation? </p>
+	
+								<p>Reveal.js lets you build your presentations as a website, 
+								so all you need to present is a browser. </p>
+								<p>Anything that runs on the web can run on the slides.
+								Reveal.js is can run on mobile devices
+								   without the need to install an app</p>
+						</aside>
+					</section>
+	
+					<section>
+						<h1>Goal</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="1">Extend/customize the framework to conform to ERNI branding</li>
+							<li class="fragment" data-fragment-index="2">Use the framework to speak visually</li>
+							<li class="fragment" data-fragment-index="3">Create engaging and interactive presentations</li>
+							<li class="fragment" data-fragment-index="4">Be able to run presentation on different OS on different devices</li>
+							<li class="fragment" data-fragment-index="5">Be able to embed different media on presentation</li>
+							<li class="fragment" data-fragment-index="6">Utilize ERNI’s web development capabilities in marketing</li>
+						</ul>			   
+					</section>
+	
+					<section>
+						<h1>Pros</h1>
+						<section>
+							<ul>
+								<li class="fragment" data-fragment-index="1">Markdown support</li>
+								<li class="fragment" data-fragment-index="2">Export to PDF which is also viewable in a browser</li>
+								<li class="fragment" data-fragment-index="3">Beautiful transitions</li>
+								<li class="fragment" data-fragment-index="4">Nested slides</li>
+								<li class="fragment" data-fragment-index="5">Point of View (zoom in to area)</li>
+								<li class="fragment" data-fragment-index="6">Touch enabled (compatible to mobile devices)</li>
+							</ul>
+						</section>
+						<section>
+							<ul>
+								<li class="fragment" data-fragment-index="1">Media support (image, video, gif, audio)</li>
+								<li class="fragment" data-fragment-index="2">Speaker’s View with Notes and Timer</li>
+								<li class="fragment" data-fragment-index="3">Pause Presentation</li>
+								<li class="fragment" data-fragment-index="4">Highly customizable</li>
+								<li class="fragment" data-fragment-index="5">Intergallactic connections</li>
+								<li class="fragment" data-fragment-index="6">Lets you load any javascript library</li>
+								<li class="fragment" data-fragment-index="7">Lets you present live web elements like forms etc useful for on the spot demo</li>
+								<li class="fragment" data-fragment-index="8">Lets you load a full webpage inside the presentation itself</li>
+							</ul>
+						</section>
+						<section>
+							<h1>Some Plugins Demo</h1>
+							<li><a href="https://rajgoel.github.io/reveal.js-demos/chalkboard-demo.html#/">Chalkboard</a></li>
+							<li><a href="https://rajgoel.github.io/reveal.js-demos/chart-demo.html#/">Charts</a></li>
+							<li><a href="https://denehyg.github.io/reveal.js-menu/#/home">Menu</a></li>
+						</section>
+					</section>
+					
+					<section>
+						<h1>Scope</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="1">Marketing Presentations</li>
+							<li class="fragment" data-fragment-index="2">Not meant to replace powerpoint EMOT</li>
+							<li class="fragment" data-fragment-index="3">Runs on the browser</li>
+							<li class="fragment" data-fragment-index="4">Written in HTML5, CSS3 and Javascript</li>
+						</ul>
+					</section>
+
+					<section>
+						<h1>Delivered Result</h1>
+					</section>
+	
+					<section>
+						<h1>Limitations</h1>
+						<ul>
+							<li class="fragment" data-fragment-index="1">For Developers</li>
+							<li class="fragment" data-fragment-index="2">Learning Curve</li>
+							<li class="fragment" data-fragment-index="3">Old browsers does not support like IE8 below</li>
+							<li class="fragment" data-fragment-index="4">Opensource GUI editor</li>
+							<li class="fragment" data-fragment-index="5">Assets and Themes needs to be created</li>
+						</ul>
+					</section>
+	
+					<section>
+						<h1>Timeline</h1>
+						<ul class="fragment" data-fragment-index="1">
+							<li>Week 1: First glimpse of the framework</li>
+							<li>Week 2: ERNI Wiki/Sharepoint Documentation</li>
+							<li>Week 3: Github repo for assets</li>
+							<li>Week 4-12: Creation of assets</li>
+							<li>Week 13-14: Demo & Revisions</li>
+							<li>Week 15-20: Simple CMS for GUI, Deployment to erni hosting</li>
+							<li>Week 21: Final Demo, Revision, Documentation</li>
+						</ul>
+					</section>
+	
+					<section>
+						<section data-background-image="images/bg2.png">
+						</section>
+						<section>
+							<h1>For Developers</h1>
+							<ul>
+								<li class="fragment" data-fragment-index="1">Live view of web elements/web pages for demo
+									</li>
+								<li class="fragment" data-fragment-index="2">Highly extendable</li>
+								<li class="fragment" data-fragment-index="3">Use of web technologies on presentations</li>
+							</ul>
+						</section>
+						<section>
+							<h1>For ERNI</h1>
+							<ul>
+								<li class="fragment" data-fragment-index="1">New way to present infographics, charts etc</li>
+								<li class="fragment" data-fragment-index="2">Better visualization</li>
+								<li class="fragment" data-fragment-index="3">Better client engagement</li>
+								<li class="fragment" data-fragment-index="4">Boost marketing potential</li>
+								<li class="fragment" data-fragment-index="5">Alternative to presentation softwares</li>
+							</ul>
+						</section>
+						<section>
+							<h1>For Clients</h1>
+							<ul>
+								<li class="fragment" data-fragment-index="1">New presentation experience</li>
+								<li class="fragment" data-fragment-index="2">Better visualization</li>
+							</ul>
+						</section>
+					</section>
+	
+					<section>
+						<h1>Links and References</h1>
+						<ul>
+							<li>https://github.com/hakimel/reveal.js</li>
+							<li>https://revealjs.com/#/5</li>
+							<li>https://editorjs.io/</li>
+						</ul>
+					</section>
 			</div>
 		</div>
 
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
+		<!--editor-->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script><!-- Header -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script><!-- Image -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script><!-- Delimiter -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/list@latest"></script><!-- List -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/checklist@latest"></script><!-- Checklist -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script><!-- Quote -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script><!-- Code -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script><!-- Embed -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/table@latest"></script><!-- Table -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/link@latest"></script><!-- Link -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/warning@latest"></script><!-- Warning -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@2.0.0"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script><!-- Marker -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script><!-- Inline Code -->
+		<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script><!-- Inline Code -->
+
+		
+		<script src="js/jq3.4.1.js"></script>
+		<script src="js/editor-data.js"></script>
+		<script src="js/reveal.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>
