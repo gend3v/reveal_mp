@@ -162,3 +162,6 @@ ul, ol, div, p {
 	position: absolute;
 	font-size: 14px;
 }
+
+
+#menu, #menu2{display: none;}

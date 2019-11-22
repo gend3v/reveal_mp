@@ -31,191 +31,184 @@
 			<a id="menu"><i class="fas fa-bars"></i></a>
 
 			<button id="addSlide" class="btn btn-primary"><i class="fas fa-plus"></i> add slide</button>
-			<button id="addChild" class="btn btn-primary"><i class="fas fa-plus"></i> add child</button>
+			<!-- <button id="addChild" class="btn btn-primary"><i class="fas fa-plus"></i> add child</button> -->
 			<button id="removeSlide" class="btn btn-danger"><i class="fas fa-trash"></i> remove slide</button>
 			<div id="output"></div>
-			<hr/>
-			<h4>Change Style</h4>
+			<br/>
+			<h4>Change Layout</h4>
 			<select id="changeLayout" class="form-control">
+				<option value="center">center</option>
 				<option value="left">left</option>
 				<option value="right">right</option>
-				<option value="center">center</option>
 			</select>
 			<!-- <button id="editSlide" class="btn btn-primary"><i class="fas fa-pencil-alt"></i> edit slide</button>
 			<button id="saveButton" class="btn btn-primary"><i class="fas fa-save"></i> save slide</button> -->
 		</div>
 
+		<div class="slidenav">
+			<a id="menu2"><i class="fas fa-bars"></i></a>
+
+			<ul>
+				<li><a href="#/what">What is Reveal.js</a></li>
+				<li><a href="#/goals">Goals</a></li>
+				<li><a href="#/pros">Pros</a></li>
+				<li><a href="#/scope">Scope</a></li>
+				<li><a href="#/value">Value</a></li>
+				<li><a href="#/lessons">Lessons Learned</a></li>
+				<li><a href="#/encourage">Encourage</a></li>
+			</ul>
+		</div>
+
 
 		<div class="reveal">
 			<div class="slides">
-					<section data-background-image="images/bg.png">
-					</section>
-	
-					<section>
-						<h1>Contents</h1>
-						<section class="layout-left">
-							<img src="images/Picture1.png"/>
-							<h3>Overview</h3>
-							<ul>
-								<li>Goal</li>
-								<li>Scope</li>
-								<li>Expected Result</li>
-								<li>Limitations</li>
-								<li>Timeline</li>
-								<li>Value</li>
-								<li>Links and References</li>
-						</section>
+					<section id="start" data-background-image="images/bg.png"></section>
+					
+					<section id="what">
+						<div class="layout-center">
+							<br/><br/><img src="images/giphy.gif" alt="what"/></div>
+						<aside class="notes">
+							<h2>Presentation Problems</h2>
+							<p>Does the venue computer have compatible powerpoint version installed?</p>
+							<p>How to promptly share slides with all audiences using different OS?</p>
+						</aside>
 					</section>
 					
-					<section>
-						<h1>What is Reveal.js?</h1>
-						<h3 class="fragment" data-fragment-index="1">A presentation framework that utilizes HTML5, CSS and JavaScript to render portions of a webpage as individual slides.</h3>
+					<section data-background-image="images/webdev.png">
 						<aside class="notes">
-								<p>Will my slides file be recognized by the shared computer at the venue?</p>
-								<p>How to share slides with all audiences using different OS?</p>
-								<p>Will my slides be accessible to all individuals?</p>
-								<p>Most important one, how to make my slides interesting & engaging and not just another boring presentation? </p>
-	
-								<p>Reveal.js lets you build your presentations as a website, 
-								so all you need to present is a browser. </p>
-								<p>Anything that runs on the web can run on the slides.
-								Reveal.js is can run on mobile devices
-								   without the need to install an app</p>
+							<p>Reveal.js is a presentation framework that utilizes HTML5, CSS and JavaScript to render portions of a webpage as individual slides.</p>
+							<p>Reveal.js lets you build your presentations as a website, 
+							so all you need to present is a browser. </p>
+							<p>Anything that runs on the web can run on the slides.
+							Reveal.js can run on mobile devices
+							without the need to install an app</p>
 						</aside>
 					</section>
 	
-					<section class="layout-right">
+					<section  id="goals" class="layout-right" data-background-image="images/target_motion_icon.gif">
 						<h1>Goals</h1>
 						<ul>
-							<li class="fragment" data-fragment-index="1">Extend/customize the framework to conform to ERNI branding</li>
-							<li class="fragment" data-fragment-index="2">Use the framework to speak visually</li>
-							<li class="fragment" data-fragment-index="3">Create engaging and interactive presentations</li>
-							<li class="fragment" data-fragment-index="5">Be able to embed different media on presentation</li>
-							<li class="fragment" data-fragment-index="6">Utilize ERNI’s web development capabilities in marketing</li>
+							<li>Utilize ERNI’s web development <br/> capabilities in marketing</li>
+							<br/><br/><br/><br/>
+							<li class="fragment" data-fragment-index="2">Extend/customize the framework <br/>to conform to ERNI branding</li>
 						</ul>		
-						<img src="images/Picture1.png"/>	   
 					</section>
 	
-					<!-- <section>
-						<h1>Pros</h1>
-						<section>
-							<ul>
-								<li class="fragment" data-fragment-index="1">Markdown support</li>
-								<li class="fragment" data-fragment-index="2">Export to PDF which is also viewable in a browser</li>
-								<li class="fragment" data-fragment-index="3">Beautiful transitions</li>
-								<li class="fragment" data-fragment-index="4">Nested slides</li>
-								<li class="fragment" data-fragment-index="5">Point of View (zoom in to area)</li>
-								<li class="fragment" data-fragment-index="6">Touch enabled (compatible to mobile devices)</li>
-							</ul>
-						</section>
-						<section>
-							<ul>
-								<li class="fragment" data-fragment-index="1">Media support (image, video, gif, audio)</li>
-								<li class="fragment" data-fragment-index="2">Speaker’s View with Notes and Timer</li>
-								<li class="fragment" data-fragment-index="3">Pause Presentation</li>
-								<li class="fragment" data-fragment-index="4">Highly customizable</li>
-								<li class="fragment" data-fragment-index="5">Intergallactic connections</li>
-								<li class="fragment" data-fragment-index="6">Lets you load any javascript library</li>
-								<li class="fragment" data-fragment-index="7">Lets you present live web elements like forms etc useful for on the spot demo</li>
-								<li class="fragment" data-fragment-index="8">Lets you load a full webpage inside the presentation itself</li>
-							</ul>
-						</section>
-						<section>
-							<h1>Some Plugins Demo</h1>
-							<li><a href="https://rajgoel.github.io/reveal.js-demos/chalkboard-demo.html#/">Chalkboard</a></li>
-							<li><a href="https://rajgoel.github.io/reveal.js-demos/chart-demo.html#/">Charts</a></li>
-							<li><a href="https://denehyg.github.io/reveal.js-menu/#/home">Menu</a></li>
-						</section>
-					</section> -->
-					
-					<section class="layout-right">
-						<h1>Scope</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">Marketing Presentations</li>
-							<li class="fragment" data-fragment-index="2">Not meant to replace powerpoint EMOT</li>
-							<li class="fragment" data-fragment-index="3">Runs on the browser</li>
-							<li class="fragment" data-fragment-index="4">Written in HTML5, CSS3 and Javascript</li>
-						</ul>
-						<img src="images/box.png"/>
-					</section>
+<section id="pros">
+<h1>Pros</h1>
 
-					<section>
-						<h1>Expected Result</h1>
-						<ul>
-							<li>This presentation</li>
-							<li>Simple GUI to show capabilities of the framework</li>
-							<li>Wiki Documentation</li>
-						</ul>
+<section data-transition="zoom">
+<ul>
+	<li>Markdown Support</li>
+</ul>
+<pre>
+## Markdown support
+
+Write content using inline or external Markdown.
+Instructions and more info available in the 
+[readme](https://github.com/hakimel/reveal.js#markdown).
+
+<code class="markdown">
+<section data-markdown>
+## Markdown support
+
+Write content using inline or external Markdown.
+Instructions and more info available in the 
+[readme](https://github.com/hakimel/reveal.js#markdown).
+</section>
+</code>
+</pre>
+</section>
+
+<section data-transition="zoom">
+	<ul>
+		<li>Beautiful transitions</li>
+		<li class="fragment" data-fragment-index="1">Nested slides</li>
+		<li class="fragment" data-fragment-index="2">Point of View (double click to an area)</li>
+		<li class="fragment" data-fragment-index="3">Touch enabled (swipe to navigate)</li>
+		<li class="fragment" data-fragment-index="4">Mobile remote control</li>
+	</ul>
+</section>
+<section>
+	<ul>
+		<li>Slide Navigation (press "esc")</li>
+		<li class="fragment" data-fragment-index="1">Intergallactic connections (<a href="#/start">Click Me!</a>) </li>
+		<li class="fragment" data-fragment-index="2">Speaker’s View with Notes and Timer (press "s")</li>
+		<li class="fragment" data-fragment-index="3">Pause Presentation (press "b")</li>
+	</ul>
+</section>
+<section>
+	<ul>
+		<li>Embed different media</li>
+	</ul>
+</section>
+<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-muted>
+</section>
+<section data-background-image="images/wow.gif">
+</section>
+<section data-background-iframe="https://www.betterask.erni/" data-background-interactive>
+</section>
+<section></section>
+<section>
+	<h4>Embed and export to PDF</h4>
+	<br/>
+	<iframe data-src="https://www.slideshare.net/slideshow/embed_code/42840540" frameborder="0" height="400px" width="700px"></iframe>
+</section>
+
+</section><!--end pros-->
+	
+					<section id="scope" class="layout-right">
+						<h1>Scope</h1>
+						<section>
+							<ul>
+								<li class="fragment" data-fragment-index="1">Knowledge of HTML & CSS required</li>
+								<li class="fragment" data-fragment-index="2">Runs on modern browsers</li>
+								<li class="fragment" data-fragment-index="3">Not meant to replace EMOT</li>
+							</ul>
+						</section>
+						<img src="images/focus.jpg" alt="scope" class="no-border">
 					</section>
 	
-					<section>
-						<h1>Limitations</h1>
-						<ul>
-							<li class="fragment" data-fragment-index="1">For Developers</li>
-							<li class="fragment" data-fragment-index="2">Minimal Learning Curve</li>
-							<li class="fragment" data-fragment-index="3">Old browsers does not support like IE8 below</li>
-							<li class="fragment" data-fragment-index="4">No opensource GUI editor</li>
-							<li class="fragment" data-fragment-index="5">Assets and Themes needs to be created</li>
-						</ul>
-					</section>
-	
-					<section>
-						<h1>Timeline</h1>
-						<ul class="fragment" data-fragment-index="1">
-							<li>Milestone 1: First glimpse of the framework</li>
-							<li>Milestone 2: Github repo for assets
-								<ul>
-									<li><a href="https://github.com/gend3v/reveal_mp">Code Repo</a></li>
-								</ul>
-							</li>
-							<li>Milestone 3: Creation of simple gui</li>
-							<li>Milestone 4: Demo & Revisions</li>
-							<li>Final Demo</li>
-						</ul>
-					</section>
-	
-					<section>
-						<section data-background-image="images/bg2.png">
+					<section id="value">
+						<section data-background-image="images/bg2.png" data-transition="zoom">
 						</section>
 						<section>
 							<h1>For Developers</h1>
 							<ul>
-								<li class="fragment" data-fragment-index="1">Live view of web elements/web pages for demo
-									</li>
-								<li class="fragment" data-fragment-index="2">Highly extendable</li>
-								<li class="fragment" data-fragment-index="3">Use of web technologies on presentations</li>
+								<li class="fragment" data-fragment-index="1">Live view of web elements/web pages for demo purposes</li>
+								<li class="fragment" data-fragment-index="2">Update 1 page code of presentation, hit refresh</li>
+								<li class="fragment" data-fragment-index="3">Syntax highlighting for code demonstrations</li>
+								<li class="fragment" data-fragment-index="4">Use of web technologies on presentations, minimal familiarization time</li>
 							</ul>
 						</section>
 						<section>
 							<h1>For ERNI</h1>
 							<ul>
-								<li class="fragment" data-fragment-index="1">New tool to present infographics, charts etc</li>
-								<li class="fragment" data-fragment-index="2">Better visualization</li>
-								<li class="fragment" data-fragment-index="3">Better client engagement</li>
-								<li class="fragment" data-fragment-index="4">Boost marketing potential</li>
-								<li class="fragment" data-fragment-index="5">Alternative to presentation softwares</li>
+								<li class="fragment" data-fragment-index="1">Alternative tool to present interactive infographics</li>
+								<li class="fragment" data-fragment-index="2">Better client engagement</li>
+								<li class="fragment" data-fragment-index="3">Boost marketing potential</li>
 							</ul>
 						</section>
 						<section>
 							<h1>For Clients</h1>
 							<ul>
-								<li class="fragment" data-fragment-index="1">New presentation experience</li>
+								<li class="fragment" data-fragment-index="1">New presentation user-experience</li>
 								<li class="fragment" data-fragment-index="2">Better visualization</li>
+								<li class="fragment" data-fragment-index="3">Glimpse of what the company loves to do</li>
 							</ul>
 						</section>
 					</section>
-	
-					<section>
-						<h1>Links and References</h1>
-						<ul>
-							<li>Official Documentation: <a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></li>
-							<li>Demo: <a href="https://revealjs.com/#/5">https://revealjs.com/#/5</a></li>
-						</ul>
 
-						<h3>Other Tools Used</h3>
-						<ul>
-							<li>https://editorjs.io/</li>
-						</ul>
+					<section id="lessons">
+						<div class="layout-center">
+							<h1>Lesson Learned</h1>
+							<img src="images/presentation.gif" alt="presentation" class="center">
+						</div>
+					</section>
+
+					<section id="encourage" data-background-image="images/light.gif"></section>
+					
+					<section data-background-image="images/last.png" data-transition="zoom">
 					</section>
 			</div>
 		</div>

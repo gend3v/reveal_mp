@@ -12,7 +12,7 @@ function selectData(){
         withBackground: false,
       }
     },
-    {
+    /*{
       "type" : "embed",
       "data" : {
         "service" : "coub",
@@ -22,7 +22,7 @@ function selectData(){
         "height" : 320,
         "caption" : "My Life"
       }
-    },
+    },*/
     {
       type: "header",
       data: {

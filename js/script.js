@@ -103,11 +103,14 @@ function reveal(){
     Reveal.initialize({
         slideNumber: true,
         center: false,
+        previewLinks: true,
         dependencies: [
             { src: 'plugin/markdown/marked.js' },
             { src: 'plugin/markdown/markdown.js' },
             { src: 'plugin/notes/notes.js', async: true },
-            { src: 'plugin/highlight/highlight.js', async: true }
+            { src: 'plugin/highlight/highlight.js', async: true },
+            { src: 'http://localhost:3001/socket.io/socket.io.js', async: true },
+            { src: 'plugins/remote-control/remote.js', async: true }
         ]
     });
 }reveal();
@@ -155,8 +158,11 @@ function reveal(){
       reveal();
   });		
 
-  g("#menu").click(function(){console.log(1);
+  g("#menu").click(function(){
     g(".toolbar").toggleClass("open");
+  });
+  g("#menu2").click(function(){
+    g(".slidenav").toggleClass("open");
   });
 
 

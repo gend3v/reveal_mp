@@ -16,7 +16,7 @@ body {
 
 .reveal {
   font-family: "Calibri Light", "Source Sans Pro", sans-serif;
-  font-size: 1.2em;
+  font-size: 1.8em;
   font-weight: normal;
   color: #414042; }
 
@@ -61,10 +61,10 @@ body {
   font-size: 2.3em; }
 
 .reveal h3 {
-  font-size: 1.6em; }
+  font-size: 2.1em; }
 
 .reveal h4 {
-  font-size: 1.3em; }
+  font-size: 1.8em; }
 
 .reveal h1 {
   text-shadow: none; }
@@ -276,6 +276,7 @@ body {
   box-sizing: border-box; }
 
 .toolbar {
+  font-family: 'Calibri Light';
   width: 300px;
   height: 100vh;
   left: -300px;
@@ -297,9 +298,44 @@ body {
     right: -25px;
     top: 10px;
     cursor: pointer;
-    color: #000; }
+    color: #ccc; }
   .toolbar * {
     margin: 4px 0; }
+
+.slidenav {
+  font-family: 'Calibri Light';
+  width: 300px;
+  height: 100vh;
+  right: -300px;
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 5;
+  transition: 400ms ease;
+  box-shadow: 0 0 3px #ccc;
+  padding: 15px;
+  background: #033778; }
+  .slidenav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .slidenav a {
+    color: #ffffff;
+    margin: 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5em; }
+  .slidenav.open {
+    right: 0; }
+  .slidenav #menu2 {
+    position: absolute;
+    left: -35px;
+    top: 10px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 1em; }
 
 .present {
   top: auto !important; }
@@ -320,11 +356,18 @@ body {
     background: #ffffff;
     color: #033778; }
 
+.form-control {
+  height: 45px;
+  padding: 0 0 0 30px;
+  border: 1px solid #9facc5; }
+
 .reveal section {
   text-align: left;
   padding-top: 3em; }
   .reveal section h1 {
-    margin: 0.5em 0 0; }
+    margin: 0.5em 0 0;
+    color: #033778;
+    text-shadow: rgba(255, 255, 255, 0.6); }
   .reveal section h3 {
     color: #033778;
     font-weight: bold;
@@ -334,25 +377,36 @@ body {
     list-style-image: url("../../images/list-style-img.png");
     margin-left: 2em; }
     .reveal section ul li {
-      margin: 1.5em 0; }
+      margin: 1em 0; }
     .reveal section ul ul {
       list-style-image: none;
       list-style-type: square; }
   .reveal section img {
     max-height: 500px;
     border: 0; }
+  .reveal section .no-border {
+    border: 0;
+    box-shadow: none;
+    outline: none; }
 
 .col-2 {
   width: 48%;
   display: inline-block; }
 
-section.layout-left img {
+.layout-left img {
   float: left;
   margin-right: 30px; }
 
-section.layout-right img {
+.layout-right img {
   float: right;
   margin-left: 30px; }
+
+.layout-center {
+  text-align: center !important; }
+
+.reveal pre {
+  font-size: 1em;
+  padding: 15px; }
 
 /* editor overwrites*/
 .cdx-simple-image__caption[contentEditable=true][data-placeholder]:empty::before {
